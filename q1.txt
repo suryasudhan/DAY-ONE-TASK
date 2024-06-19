@@ -14,3 +14,15 @@ HTTP is hyper texr transport protocal its working on sending requst to the data 
 * HTTP2 can use one connection for parallelism 
 * HTTP2 is faster and more relibal than HTTP1
 * HTTP2 is avoiding network delay by usning multiplexed 
+
+HTTP1:
+* It works on the textual format.
+* There is head of line blocking that blocks all the requests behind it until it doesn’t get its all resources.
+* uses requests resource Inlining for use getting multiple pages
+* It compresses data by itself.
+
+HTTP2:
+* It works on the binary protocol.
+* It allows multiplexing so one TCP connection is required for multiple requests.
+* It 	It uses PUSH frame by server that collects all multiple pages 
+* It compresses data by itself.	It uses HPACK for data compression.
